@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+
+    >
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@mipmap/ic_home"
+        android:title="@string/home" />
+    <item
+        android:id="@+id/wish"
+        android:enabled="true"
+        android:icon="@mipmap/ic_wishlist"
+        android:title="@string/wishlist" />
+
+    <item
+        android:id="@+id/cart"
+        android:enabled="true"
+        android:icon="@mipmap/ic_cart"
+        android:title="@string/cart" />
+    <item
+        android:id="@+id/notification"
+        android:enabled="true"
+        android:icon="@mipmap/ic_notification"
+        android:title="@string/notification" />
+    <item
+        android:id="@+id/profile"
+        android:enabled="true"
+        android:icon="@mipmap/ic_profile"
+        android:title="@string/profile" />
+</menu>

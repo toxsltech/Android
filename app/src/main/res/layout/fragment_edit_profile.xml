@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandle"
+            type="com.tracolfood.utils.ViewClickHandler" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_30sdp">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dotsIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_dots"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/profileTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:gravity="center_vertical"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/my_profile"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/backIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:padding="@dimen/_5sdp"
+                android:src="@mipmap/ic_backblack"
+                app:layout_constraintBottom_toBottomOf="@+id/profileTV"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/profileTV" />
+
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/profileIV"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_userdummy"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileTV"
+                app:shapeAppearance="@style/circleImageView" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/camIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:src="@mipmap/ic_cam"
+                app:layout_constraintBottom_toBottomOf="@+id/profileIV"
+                app:layout_constraintEnd_toEndOf="@+id/profileIV" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.12" />
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/firstnameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableStart="@mipmap/ic_user"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/full_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileIV" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/lastNameET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                android:drawableStart="@mipmap/ic_user"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/last_name"
+                android:imeOptions="actionNext"
+                android:inputType="textCapSentences"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstnameET" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:drawableStart="@mipmap/ic_email"
+                android:drawablePadding="@dimen/_10sdp"
+                android:focusable="false"
+                android:focusableInTouchMode="false"
+                android:hint="@string/email"
+                android:imeOptions="actionDone"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/lastNameET" />
+
+
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/phoneET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/phone_no"
+                android:imeOptions="actionNext"
+                android:inputType="phone"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/saveBT"
+                style="@style/buttonViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_15sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:text="@string/save"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/emailET"
+                app:layout_constraintStart_toStartOf="@+id/emailET"
+                app:layout_constraintTop_toBottomOf="@+id/phoneET" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dropIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@mipmap/ic_pattren"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profileIV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

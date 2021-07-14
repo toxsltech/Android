@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandle"
+            type="com.tracolfood.utils.ViewClickHandler" />
+
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/checkOutTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/checkOut"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/checkOutRV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/checkOutTV" />
+
+
+<!--            <androidx.appcompat.widget.AppCompatTextView-->
+<!--                android:id="@+id/payMethodTV"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginTop="@dimen/_5sdp"-->
+<!--                android:drawableEnd="@mipmap/ic_mastercard"-->
+<!--                android:text="Payment Method : "-->
+<!--                android:textSize="@dimen/_12sdp"-->
+<!--                app:layout_constraintStart_toStartOf="@+id/checkOutRV"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/checkOutRV"-->
+
+
+<!--                />-->
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/numItemTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Items : "
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/checkOutRV"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/numItemPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="RM 0"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toTopOf="@+id/numItemTV"
+
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/itemPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Items Price"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/startV" />
+
+            <View
+                android:id="@+id/startV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/numItemTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/itemPriceValueTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="RM 0"
+                android:textColor="@color/Black"
+                android:gravity="end"
+                app:layout_constraintStart_toEndOf="@+id/deliveryTV"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/startV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/discountTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Discount"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/itemPriceValueTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/discountPriceTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="RM 0"
+                android:textColor="@color/Black"
+                android:gravity="end"
+                app:layout_constraintStart_toEndOf="@+id/deliveryTV"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toTopOf="@+id/discountTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/taxTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Tax"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/discountPriceTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/taxPriceTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="RM 0"
+                android:gravity="end"
+                app:layout_constraintStart_toEndOf="@+id/deliveryTV"
+                android:textColor="@color/Black"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toTopOf="@+id/taxTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/deliveryTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="Delivery Charges"
+                android:textColor="@color/Gray"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/taxPriceTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/deliveryPriceTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="RM 0"
+                android:gravity="end"
+                app:layout_constraintStart_toEndOf="@+id/deliveryTV"
+                android:textColor="@color/Black"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toTopOf="@+id/deliveryTV" />
+
+
+            <View
+                android:id="@+id/endV"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/dotted_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/deliveryTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Total"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/endV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/totalPriceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="RM 0"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/endV" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/termsCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:button="@drawable/terms_check"
+                android:buttonTint="@color/colorPrimary"
+                android:textSize="@dimen/_13sp"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/totalPriceTV" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/termsTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8dp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:text="Terms &amp; Conditions"
+                app:layout_constraintBottom_toBottomOf="@+id/termsCB"
+                app:layout_constraintStart_toEndOf="@+id/termsCB"
+                app:layout_constraintTop_toTopOf="@+id/termsCB" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/placeOrderBT"
+                style="@style/buttonViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:text="Place Order"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/checkOutRV"
+                app:layout_constraintStart_toStartOf="@+id/checkOutRV"
+                app:layout_constraintTop_toBottomOf="@+id/termsCB" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</layout>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/addressValueTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="A-06-06, Block A,Radia Parsianran Arked"
+            app:layout_constraintEnd_toStartOf="@+id/editIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/phoneTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="Phone Number : 9803940990"
+            app:layout_constraintEnd_toStartOf="@+id/editIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressValueTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/zipCodeTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Zip Code : 9803940990"
+            android:layout_marginEnd="@dimen/_10sdp"
+            app:layout_constraintEnd_toStartOf="@+id/editIV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTV" />
+
+
+        <View
+            android:id="@+id/viewV"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@color/gray_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/zipCodeTV">
+
+
+        </View>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/editIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_2sdp"
+            app:layout_constraintEnd_toStartOf="@+id/deleteIV"
+            android:src="@drawable/ic_edit_black"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/deleteIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatCheckBox
+            android:id="@+id/cardCB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:button="@drawable/payment_check"
+            android:checked="false"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/deleteIV"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

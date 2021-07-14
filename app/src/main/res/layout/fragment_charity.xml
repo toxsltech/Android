@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandle"
+            type="com.tracolfood.utils.ViewClickHandler" />
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/topRL"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/backIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@mipmap/ic_backblack" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:src="@mipmap/ic_icon" />
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/charityTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/charity"
+                android:textSize="@dimen/_16sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/topRL" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageIV"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_youtube"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/charityTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/urgentTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageIV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/infoTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/urgentTV" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/shareBT"
+                style="@style/buttonViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:text="@string/share_content"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/infoTV"
+                app:layout_constraintTop_toBottomOf="@+id/infoTV" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/donateBT"
+                style="@style/buttonViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+                android:text="@string/donate_now"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/infoTV"
+                app:layout_constraintTop_toBottomOf="@+id/shareBT" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/commentTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:drawableStart="@mipmap/ic_masjidicon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="start"
+                android:textColor="@color/Black"
+                android:textSize="@dimen/_11sdp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/donateBT" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</layout>

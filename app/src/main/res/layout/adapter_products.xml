@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="products"
+            type="com.tracolfood.model.PackageData" />
+
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_10sdp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_7sdp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imageIV"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                app:layout_constraintCircleRadius="@dimen/_30sdp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{products.name}"
+                app:layout_constraintStart_toStartOf="@+id/imageIV"
+                app:layout_constraintTop_toBottomOf="@+id/imageIV" />
+
+            <androidx.appcompat.widget.AppCompatRatingBar
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:progressTint="@color/yellow_bg"
+                android:rating="0"
+                app:layout_constraintStart_toStartOf="@+id/imageIV"
+                app:layout_constraintTop_toBottomOf="@+id/textTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/priceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@{@string/rm_sign.concat(products.amount)}"
+                android:textSize="@dimen/_8sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/imageIV" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

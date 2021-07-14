@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White"
+        android:fillViewport="true">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Log In"
+                android:textSize="@dimen/_15sdp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dotsIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_dots"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.2" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/dropIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:src="@mipmap/ic_pattren"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/logoIV" />
+
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guidelineG"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.32" />
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/logoIV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_loginlogo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guideline" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/loginTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="Log in your existing account"
+                android:textColor="@color/gray_back"
+                android:textSize="@dimen/_14sdp"
+                app:layout_constraintBottom_toTopOf="@+id/emailET"
+                app:layout_constraintStart_toStartOf="@+id/emailET"
+
+
+                />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/emailET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_30sdp"
+                android:drawableStart="@mipmap/ic_email"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/email_id"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/guidelineG" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/passwordET"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:drawableStart="@mipmap/ic_password"
+                android:drawablePadding="@dimen/_10sdp"
+                android:hint="@string/password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:singleLine="true"
+                android:textColor="@color/Black"
+                app:layout_constraintLeft_toLeftOf="@+id/emailET"
+                app:layout_constraintRight_toRightOf="@+id/emailET"
+                app:layout_constraintTop_toBottomOf="@+id/emailET" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/forPasswordTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:fontFamily="@font/montserrat_medium"
+                android:gravity="end"
+                android:padding="@dimen/_5sdp"
+                android:text="Forgot Password ?"
+                android:textColor="@color/gray_back"
+                android:textSize="@dimen/_10sdp"
+                app:layout_constraintEnd_toEndOf="@+id/passwordET"
+                app:layout_constraintTop_toBottomOf="@+id/passwordET" />
+
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/rememberMeCB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/remember_me"
+                android:textColor="@color/Gray"
+                android:textSize="@dimen/_12sp"
+                app:layout_constraintStart_toStartOf="@+id/passwordET"
+                app:layout_constraintTop_toBottomOf="@id/passwordET" />
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/loginBT"
+                style="@style/buttonViewStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:text="Log In"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+                app:layout_constraintEnd_toEndOf="@+id/passwordET"
+                app:layout_constraintStart_toStartOf="@+id/passwordET"
+                app:layout_constraintTop_toBottomOf="@+id/forPasswordTV" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/signUpTV"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="@string/don_t_have_an_account_sign_up"
+                android:textColor="@color/hint_color"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

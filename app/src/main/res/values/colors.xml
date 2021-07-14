@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<resources>
+    <color name="colorPrimary">#37AF76</color>
+    <color name="colorPrimaryDark">#37AF76</color>
+    <color name="colorAccent">#000000</color>
+    <color name="button_color">#37AF76</color>
+    <color name="logistic">#1A0550</color>
+    <color name="health">#FE5896</color>
+    <color name="pay">#3F5CAC</color>
+    <color name="takafull">#00AC52</color>
+    <color name="colorAccentSelected">#FD8E49</color>
+    <color name="lightBlack">#ff323232</color>
+    <color name="Gray_divider">#141921</color>
+    <color name="transparent">#00000000</color>
+    <color name="White">#FFFFFF</color>
+    <color name="Orange">#FFA500</color>
+    <color name="OrangeRed">#FF4500</color>
+    <color name="Red">#FF0000</color>
+    <color name="LightGrey">#D3D3D3</color>
+    <color name="Gray">#808080</color>
+    <color name="Green">#008000</color>
+    <color name="DarkGreen">#006400</color>
+    <color name="Black">#000000</color>
+    <color name="text_color">#4d4d4d</color>
+    <color name="hint_color">#b3b3b3</color>
+    <color name="shadowColor">#F4F4F4</color>
+
+    <color name="sb__background">#ff323232</color>
+    <color name="sb__action_bg_color">#1affffff</color>
+    <color name="yellow_bg">#FAC63B</color>
+    <color name="gray_back">#B3B3B3</color>
+
+</resources>

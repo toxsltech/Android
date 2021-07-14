@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandle"
+            type="com.tracolfood.utils.ViewClickHandler" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/White">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/profileTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="@string/my_profile"
+            android:textSize="@dimen/_14sdp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/White"
+            android:fillViewport="true"
+            android:overScrollMode="never"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/profileTV">
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/White">
+
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/guideL"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent=".42" />
+
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileIV"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_margin="@dimen/_10sdp"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/ic_profileimg"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearance="@style/circleImageView" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/nameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:text="Ammy Jackson"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/profileIV" />
+
+                <androidx.appcompat.widget.AppCompatRatingBar
+                    android:id="@+id/ratingRB"
+                    style="@style/Widget.AppCompat.RatingBar.Small"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/nameTV" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/editIV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/profileIV"
+                    app:layout_constraintEnd_toEndOf="@+id/profileIV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/emailTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Email"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingRB" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/emailValueTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:text="ammyjackson@gmail.com"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideL"
+                    app:layout_constraintTop_toBottomOf="@+id/ratingRB" />
+
+
+                <View
+                    android:id="@+id/emailV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/Gray"
+                    app:layout_constraintTop_toBottomOf="@+id/emailTV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phoneTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Phone Number"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/emailV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/phoneValueTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:text="789989899"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideL"
+                    app:layout_constraintTop_toBottomOf="@+id/emailV" />
+
+
+                <View
+                    android:id="@+id/phoneV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/Gray"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneTV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subsTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:text="Subscribe Plan"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/subsValueTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_20sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:text="Just Nice 4 Me"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideL"
+                    app:layout_constraintTop_toBottomOf="@+id/phoneV" />
+
+
+                <View
+                    android:id="@+id/subsV"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1dp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:background="@color/Gray"
+                    app:layout_constraintTop_toBottomOf="@+id/subsValueTV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/registerTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_30sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:text="Registration By"
+                    android:textColor="@color/Gray"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/subsV" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/registerValueTV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_30sdp"
+                    android:layout_marginBottom="@dimen/_15sdp"
+                    android:text="Website"
+                    android:textSize="@dimen/_11sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/guideL"
+                    app:layout_constraintTop_toBottomOf="@+id/subsV" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="clickHandle"
+            type="com.tracolfood.utils.ViewClickHandler" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cartTV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:text="@string/add_on_cart"
+            android:textSize="@dimen/_16sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/cartListRV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_10sdp"
+            app:layout_constraintBottom_toTopOf="@+id/checkOutBT"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cartTV" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/cartTV"
+            app:layout_constraintStart_toStartOf="@id/cartTV"
+            app:layout_constraintEnd_toEndOf="@id/cartTV"
+            app:layout_constraintBottom_toTopOf="@id/checkOutBT"
+            android:text="@string/cart_is_empty"
+            android:gravity="center"
+            android:visibility="gone"
+            android:id="@+id/noDataTV"
+            />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/checkOutBT"
+            style="@style/buttonViewStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:onClick="@{(view)-> clickHandle.onHandleClick(view)}"
+            android:text="@string/checkOut"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/cartListRV"
+            app:layout_constraintStart_toStartOf="@+id/cartListRV" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

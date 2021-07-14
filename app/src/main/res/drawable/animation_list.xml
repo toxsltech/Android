@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+  ~ @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+  ~
+  ~ All Rights Reserved.
+  ~ Proprietary and confidential :  All information contained herein is, and remains
+  ~ the property of Ozvid Technologies Pvt. Ltd. and its partners.
+  ~ Unauthorized copying of this file, via any medium is strictly prohibited.
+  -->
+
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@drawable/ic_load1"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load2"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load3"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load4"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load5"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load6"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load7"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load8"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load9"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load10"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load11"
+        android:duration="40" />
+    <item
+        android:drawable="@drawable/ic_load12"
+        android:duration="40" />
+
+
+</animation-list>

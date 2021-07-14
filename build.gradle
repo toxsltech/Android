@@ -1,0 +1,46 @@
+/*
+ * copyright : Ozvid Technologies Pvt. Ltd. < www.ozvid.com >
+ * @author     : Shiv Charan Panjeta < shiv@ozvid.com >
+ *
+ * All Rights Reserved.
+ * Proprietary and confidential :  All information contained herein is, and remains
+ * the property of Ozvid Technologies Pvt. Ltd. and its partners.
+ * Unauthorized copying of this file, via any medium is strictly prohibited.
+ */
+
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlinVersion = '1.4.10'
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.1.2'
+        classpath 'com.google.gms:google-services:4.3.4'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlinVersion"
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        repositories {
+            maven {
+                url 'https://maven.google.com'
+            }
+            maven { url 'https://jitpack.io' }
+
+
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
