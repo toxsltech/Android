@@ -1,4 +1,5 @@
 #KotlinCodebase
+
 The main objective of this project is to demonstrate the basic use of kotlin with MVVM architecture.
 
 ## Getting Started
