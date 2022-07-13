@@ -10,4 +10,12 @@
  *
  */
 
-include ':app'
+package com.toxsl.codebase.model
+
+import com.toxsl.codebase.data.OperationCallback
+
+interface SongDataSource {
+
+    fun retrieveSongs(callback: OperationCallback<Song>)
+    fun cancel()
+}

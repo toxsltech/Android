@@ -10,4 +10,18 @@
  *
  */
 
-include ':app'
+package com.toxsl.codebase.model
+
+import com.toxsl.codebase.data.OperationCallback
+
+
+class SongRepository(private val SongDataSource: SongDataSource) {
+
+    fun fetchSongs(callback: OperationCallback<Song>) {
+        SongDataSource.retrieveSongs(callback)
+    }
+
+    fun cancel() {
+        SongDataSource.cancel()
+    }
+}

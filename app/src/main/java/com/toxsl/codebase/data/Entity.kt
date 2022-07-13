@@ -10,4 +10,11 @@
  *
  */
 
-include ':app'
+package com.toxsl.codebase.data
+
+import com.toxsl.codebase.model.Song
+
+
+data class SongResponse(val status: Int?, val msg: String?, val data: List<Song>?) {
+    fun isSuccess(): Boolean = (status == 200)
+}
